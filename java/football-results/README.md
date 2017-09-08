@@ -1,7 +1,13 @@
+# Sample Java Spring MVC project for the IBM BlueMix platform using Liberty
 
-1
-down vote
-accepted
-Try two things: 1. Use the -p command to target your deployable artifact. This would look something like cf p APP_NAME -p PATH_TO_YOUR_WAR. I usually chain my build and deploy commands so: mvn clean package && cf p APP_NAME -p PATH_TO_YOUR_WAR.
+# Project Structure
+Ensure a valid maven WAR structure, such as placing web resources in /src/main/webapp
+Ensure a valid pom.xml file
+Ensure a valid manifest.yml file for the BlueMix platform
 
-If this doesn't work then you can specify a build pack. So cf p APP_NAME -p PATH_TO_YOUR_WAR -b SOME_BUILDPACK. You can see the available build packs by calling cf buildpacks.
+# Manifest.yml
+Ensure that sufficient memory is allocated (512M was needed in for this small project, ouch!)
+Ensure that you point to the generated WAR file for web archives
+Specify the build pack for faster deployment (avoid auto detection)
+
+# @Stelinno - Michael Sundgaard
