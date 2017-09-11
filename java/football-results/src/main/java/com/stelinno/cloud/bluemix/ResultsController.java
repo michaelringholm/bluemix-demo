@@ -35,6 +35,11 @@ public class ResultsController {
 		return "{ \"success\"=\"true\"}";
 	}
 	
+	@RequestMapping(value = "/find", method = RequestMethod.GET)
+	public @ResponseBody List<FootballMatch> find(String query) {
+		return docPersistenceService.find(query); 
+	}	
+	
 	/***
 	 * curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"id":"5118084088070144","name":"Sports Results 97","domain":"Sports", "subDomain":"Statistics","endpoint":"http://sports-service.azure.com"}' https://search-dot-stelinno-dev.appspot.com/index/add.ctl
 	 * curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"id":"5081456606969856","name":"Sports Results 4","domain":"Sports", "subDomain":"Statistics","endpoint":"http://sports-service.azure.com"}' https://search-dot-stelinno-dev.appspot.com/index/add.ctl

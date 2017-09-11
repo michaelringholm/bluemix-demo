@@ -117,7 +117,7 @@ public class StandardHTTPHelper implements HTTPHelper {
 	
 	private String getStringContents(HttpResponse httpResponse) {
 		try {
-			BufferedReader br = new BufferedReader(new InputStreamReader((httpResponse.getEntity().getContent())));
+			BufferedReader br = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent(), "UTF-8"));
 			StringBuffer sb = new StringBuffer();
 			String responseLine;
 			while ((responseLine = br.readLine()) != null) {

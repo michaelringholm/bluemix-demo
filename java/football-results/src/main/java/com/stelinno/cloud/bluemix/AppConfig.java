@@ -7,6 +7,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 
 import com.google.gson.Gson;
+import com.stelinno.cloud.bluemix.cloudant.CloudantPersistenceService;
 import com.stelinno.http.HTTPHelper;
 import com.stelinno.http.StandardHTTPHelper;
 
