@@ -10,4 +10,8 @@ Ensure that sufficient memory is allocated (512M was needed in for this small pr
 Ensure that you point to the generated WAR file for web archives
 Specify the build pack for faster deployment (avoid auto detection)
 
+# Using COS (Cloud Object Storage) with S3
+https://ibm-public-cos.github.io/crs-docs/api-reference
+https://developer.ibm.com/recipes/tutorials/cloud-object-storage-s3-api-intro/
+
 # @Stelinno - Michael Sundgaard
